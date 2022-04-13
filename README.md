@@ -49,7 +49,7 @@ optional arguments:
 du2html -i du_result.txt -t 32t -o du_out.html
 ```
 
-![](https://raw.githubusercontent.com/danielmsk/du2html/main/docs/screenshot1.png?token=GHSAT0AAAAAABSGIZOM3KNUUTFMR4HLUQHMYRZRPCQ)
+![](https://raw.githubusercontent.com/danielmsk/du2html/master/docs/screenshot1.png?token=GHSAT0AAAAAABS6DQNJFXEBKQXC7BAWIOT4YSWHCWA)
 
 ## Version History
 
