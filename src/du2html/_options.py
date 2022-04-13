@@ -77,7 +77,7 @@ def get_options():
 ### OPTION ####
 OPT = {
   "TITLE": "du2html",
-  "VERSION": "0.0.2",
+  "VERSION": "0.0.3",
   "VERSION_DATE": "2022-04-13",
   "PROG": "du2html",
   "options": [

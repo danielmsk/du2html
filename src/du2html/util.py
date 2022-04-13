@@ -45,8 +45,20 @@ def humanreadable_filesize(num, suffix="B"):
         num /= 1024.0
     return f"{num:.1f}Yi{suffix}"
 
-################################################
+def fileSave(path, cont, opt, encoding='utf-8', gzip_flag="n"):
+    if gzip_flag == "gz":
+        import gzip
+        if not "b" in opt:
+            opt += "b"
+        f = gzip.open(path, opt)
+        f.write(cont.encode())
+        f.close()
+    else:
+        f = open(path, opt, encoding=encoding)
+        f.write(cont)
+        f.close
 
+################################################
 
 def walk(dirPath, ext=""):
     flist = []

@@ -21,7 +21,7 @@ extras_require = {
 }
 
 setup(name='du2html',
-    version='0.0.2',
+    version='0.0.3',
     url='https://github.com/danielmsk/du2html',
     license='MIT',
     author='Daniel Minseok Kwon',
