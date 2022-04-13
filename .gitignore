@@ -1,0 +1,14 @@
+*.pyc
+src/bamsnap/__pycache__/
+__pycache__/
+.DS_Store
+.eggs/
+*.egg-info/
+*.egg
+build/*
+build/lib/bamsnap/*
+dist/
+_build/
+tests/*.log
+tests/out/*.log
+test.sh
