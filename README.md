@@ -53,5 +53,7 @@ du2html -i du_result.txt -t 32t -o du_out.html
 
 ## Version History
 
-- 0.1.0 (2022-04-12)
+- 0.0.2 (2022-04-13)
+  - update README.md
+- 0.0.1 (2022-04-12)
   - first released.
