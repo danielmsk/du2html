@@ -8,11 +8,13 @@ from .render import HTMLRenderer
 class DU2HTML():
     opt = None
     out = ""
+    log = util.DommyLog()
 
     def __init__(self, opt):
         self.opt = opt
         self.has_opt_error = False
         self.out = self.opt['out']
+        self.log = self.opt['log']
         if self.out == "":
             self.out = self.opt['in'] + '.html'
         self.renderer = None
@@ -30,6 +32,7 @@ class DU2HTML():
         du = DUResult(infile)
         renderer =  HTMLRenderer(du, infile, self.opt['totalsize'])
         renderer.render(self.out)
+        self.log.info('SAVED.. ' + self.out)
 
     def dispatch(self):
         if self.opt['in'] is not None:

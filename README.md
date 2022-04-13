@@ -47,6 +47,8 @@ du2html -i du_result.txt -t 32t -o du_out.html
 
 ## Version History
 
+- 0.0.4 (2022-04-13)
+  - debug
 - 0.0.3 (2022-04-13)
   - debug util.py
 - 0.0.2 (2022-04-13)

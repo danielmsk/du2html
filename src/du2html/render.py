@@ -44,7 +44,9 @@ class HTMLRenderer:
         data['TOTALSIZE'] = self.get_size_string()
         data['SIZEDATA'] = json.dumps(self.get_size_data())
         data['INFILE'] = self.infile
+        data['ROOTPATH'] = self.duresult.rootpath
         data['VERSION'] = _options.OPT['VERSION']
         
         # data['DATA'] = duresult.get_renderdata()
         util.renderTemplate('temp_treetable.html', out, data)
+        
