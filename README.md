@@ -23,11 +23,6 @@ pip install https://github.com/danielmsk/du2html/raw/main/dist/du2html-0.0.1-py3
 
 This **du2html** requires the following packages:
 
-- rich
-- pyreadr
-- prettytable
-- pandas
-- pytabix
 
 ## Options
 
