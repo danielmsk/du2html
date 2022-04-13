@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/ -->
+<html lang="en" class="h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>du2html</title>
+
+<!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+<link href="./css/jquery.treegrid.css" rel="stylesheet" />
+<link href="./css/bootstrap-table.min.css" rel="stylesheet" />
+<script src="./js/jquery-3.6.0.slim.min.js"></script>
+<script src="./js/jquery.treegrid.min.js"></script>
+<script src="./js/bootstrap-table.min.js"></script>
+<script src="./js/bootstrap-table-treegrid.min.js"></script>
+
+<meta name="theme-color" content="#7952b3">
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  main > .container {
+    padding: 60px 15px 0;
+  }
+
+</style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://github.com/danielmsk/du2html" target="_blank">du2html</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div> -->
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">##INFILE##</h1>
+    <p class="lead">
+      <div>Root path: ##ROOTPATH##</div>
+      <div>TOTAL USAGE: ##TOTALSIZE##</div>
+      <table id="table"></table>
+    </p>
+  </div>
+</main>
+
+<script>
+    var $table = $("#table")
+
+    $(function () {
+      var data = ##SIZEDATA##
+      $table.bootstrapTable({
+        // url: "json/treegrid.json",
+        data: data,
+        idField: "id",
+        showColumns: false,
+        columns: [
+          //{
+          //  field: "ck",
+          //  checkbox: true,
+          //},
+          {
+            field: "name",
+            title: "Path",
+          },
+          {
+            field: "hsize",
+            title: "Size",
+            align: "right",
+          },
+          //{
+          //  field: "per",
+          //  title: "Percentage",
+          //  align: "right",
+          //},
+        ],
+        treeShowField: "name",
+        parentIdField: "pid",
+        onPostBody: function () {
+          var columns = $table.bootstrapTable("getOptions").columns
+
+          if (columns && columns[0][1].visible) {
+            $table.treegrid({
+              treeColumn: 0,
+              initialState: 'collapsed',
+              onChange: function () {
+                $table.bootstrapTable("resetView")
+              },
+            })
+          }
+        },
+      })
+    })
+  </script>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">du2html v##VERSION##</span>
+  </div>
+</footer>
+
+
+    <!-- <script src="./Sticky Footer Navbar Template · Bootstrap v5.1_files/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+      
+  
+
+</body></html>

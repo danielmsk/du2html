@@ -16,7 +16,7 @@ pip install du2html
 - from [github](https://github.com/danielmsk/du2html)
 
 ```
-pip install https://github.com/danielmsk/du2html/raw/main/dist/du2html-0.0.1-py3-none-any.whl
+pip install https://github.com/danielmsk/du2html/raw/main/dist/du2html-0.0.5-py3-none-any.whl
 ```
 
 ### Dependency
@@ -47,6 +47,8 @@ du2html -i du_result.txt -t 32t -o du_out.html
 
 ## Version History
 
+- 0.0.5 (2022-04-13)
+  - add relative path for js and css in template html
 - 0.0.4 (2022-04-13)
   - debug
 - 0.0.3 (2022-04-13)

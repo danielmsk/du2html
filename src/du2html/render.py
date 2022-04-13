@@ -39,7 +39,7 @@ class HTMLRenderer:
         return renderdata
 
 
-    def render(self, out):
+    def render(self, out, is_innerpath = False):
         data = {}
         data['TOTALSIZE'] = self.get_size_string()
         data['SIZEDATA'] = json.dumps(self.get_size_data())
@@ -47,6 +47,9 @@ class HTMLRenderer:
         data['ROOTPATH'] = self.duresult.rootpath
         data['VERSION'] = _options.OPT['VERSION']
         
-        # data['DATA'] = duresult.get_renderdata()
-        util.renderTemplate('temp_treetable.html', out, data)
+        if is_innerpath:
+            templatefile = 'temp_treetable_innerpath.html'
+        else:
+            templatefile = 'temp_treetable.html'
+        util.renderTemplate(templatefile, out, data)
         

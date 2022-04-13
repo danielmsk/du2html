@@ -31,7 +31,8 @@ class DU2HTML():
     def convert_html_from_one_du(self, infile):
         du = DUResult(infile)
         renderer =  HTMLRenderer(du, infile, self.opt['totalsize'])
-        renderer.render(self.out)
+        renderer.render(self.out, self.opt['innerpath'])
+
         self.log.info('SAVED.. ' + self.out)
 
     def dispatch(self):

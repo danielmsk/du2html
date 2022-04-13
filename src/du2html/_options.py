@@ -77,13 +77,14 @@ def get_options():
 ### OPTION ####
 OPT = {
   "TITLE": "du2html",
-  "VERSION": "0.0.4",
+  "VERSION": "0.0.5",
   "VERSION_DATE": "2022-04-13",
   "PROG": "du2html",
   "options": [
     { "param_a": "i", "param": "in", "default": None, "nargs": None, "action": None, "choices": None, "type": None, "help": "input du result file" },
     { "param_a": "t", "param": "totalsize", "default": None, "nargs": None, "action": None, "choices": None, "type": None, "help": "total hard disk size (ex: 32t, 100G, 200g)" },
     { "param_a": "o", "param": "out", "default": "", "nargs": None, "action": None, "choices": None, "type": None, "help": "output html file" },
+    { "param_a": "n", "param": "innerpath", "default": False, "nargs": None, "action": "store_true", "choices": None, "type": None, "help": "relative path for css and js" },
     # { "param_a": "p", "param": "path", "default": None, "nargs": None, "action": None, "choices": None, "type": None, "help": "path for input files" },
   ]
 }
