@@ -21,7 +21,7 @@ pip install https://github.com/danielmsk/du2html/raw/main/dist/du2html-0.0.1-py3
 
 ### Dependency
 
-This **du2html** requires the following packages:
+This **du2html** doesn't need any other package:
 
 
 ## Options
