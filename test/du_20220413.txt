@@ -1,0 +1,15 @@
+307232	./lee/leejh
+347960	./lee/leeiu
+8448	./lee/leehj/t2
+8464	./lee/leehj
+663680	./lee
+38952	./jisoo/j1
+402864	./jisoo/j2
+441832	./jisoo
+88332736	./daniel/test1
+402864	./daniel/test3
+93936	./daniel/test2
+88829560	./daniel
+257536	./mark
+252936	./tim
+90445568	.

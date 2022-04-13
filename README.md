@@ -13,7 +13,7 @@
 pip install du2html
 ```
 
-- from github
+- from [github](https://github.com/danielmsk/du2html)
 
 ```
 pip install https://github.com/danielmsk/du2html/raw/main/dist/du2html-0.0.1-py3-none-any.whl
