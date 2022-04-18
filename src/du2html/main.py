@@ -28,9 +28,34 @@ class DU2HTML():
         self.opt['log'].info('Total running time: ' + str(round(t2-t0, 1))+' sec')
         self.opt['log'].info('END')
 
+    def get_humanreadable_size(self, totalsize):
+        rst = totalsize
+        if rst is not None:
+            if rst[-1].lower() == "b":
+                rst = rst[:-1]
+            last = rst[-1].lower()
+            if last == 'k' or last == 'm' or last == 'g':
+                try:
+                    numsize = int(rst[:-1].replace(',',''))
+                    if last == 'k':
+                        numsize = numsize*1024
+                    if last == 'm':
+                        numsize = numsize*1024*1024
+                    if last == 'g':
+                        numsize = numsize*1024*1024*1024
+                    rst = util.humanreadable_filesize(numsize)
+                except ValueError:
+                    rst = totalsize
+            else:
+                try:
+                    rst = util.humanreadable_filesize(int(totalsize.replace(',','')))
+                except ValueError:
+                    rst = totalsize
+        return rst
+
     def convert_html_from_one_du(self, infile):
         du = DUResult(infile)
-        renderer =  HTMLRenderer(du, infile, self.opt['totalsize'])
+        renderer =  HTMLRenderer(du, infile, self.get_humanreadable_size(self.opt['totalsize']) )
         renderer.render(self.out, self.opt['innerpath'])
 
         self.log.info('SAVED.. ' + self.out)

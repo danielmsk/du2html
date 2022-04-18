@@ -77,8 +77,8 @@ def get_options():
 ### OPTION ####
 OPT = {
   "TITLE": "du2html",
-  "VERSION": "0.0.5",
-  "VERSION_DATE": "2022-04-13",
+  "VERSION": "0.0.6",
+  "VERSION_DATE": "2022-04-18",
   "PROG": "du2html",
   "options": [
     { "param_a": "i", "param": "in", "default": None, "nargs": None, "action": None, "choices": None, "type": None, "help": "input du result file" },
